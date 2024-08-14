@@ -1,39 +1,132 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Prueba Fase Cuatro
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+Paquete para el consumo de la API FakeStore usando Dart. Se proporcionan los siguientes tres servicios corresponden a obtener todas las categorías, los productos de una categoría y el detalle de un producto.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
 
-## Features
+## Tabla de contenido
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+  - [Instalación](#installation)
+  - [Uso](#usage)
+  - [Documentación](#documentation)
 
-## Getting started
+## Instalación
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
 
-## Usage
+### 1. Dependencia
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Añade esto al archivo de tu paquete 'pubspec.yaml':
 
-```dart
-const like = 'sample';
+```python
+   prueba_fase_tres:
+     git:
+       url: https://github.com/AngieHRP/prueba_fase_tres
+       ref: main
 ```
 
-## Additional information
+### 2. Instalarlo
+Ejecuta el siguiente comando en la línea de comandos:
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+con pub: 
+```python
+   $ pub get
+```
+
+con Flutter:
+```python
+   $ flutter packages get
+```
+
+### 3. Importarlo
+Ahora en tu código Dart, puedes usar:
+
+```python
+  import 'package:prueba_fase_tres/prueba_fase_tres.dart';
+```
+
+
+## Uso
+
+
+1. Crear una instancia de la clase PruebaFaseTres
+
+```python
+   final PruebaFaseTres pruebaFaseTres = PruebaFaseTres();  
+```
+2. A continuación se muestra un ejemplo de como acceder a cada una de las APIs de la librería
+
+ ```python
+   Future<void> _getAllCategories() async {
+    setState(() {
+      listCategories.clear();
+      listProducts.clear();
+      product = ProductModel.empty();
+    });
+    final response = await pruebaFaseTres.getAllCategories();
+    response.fold((failure) {}, (response) {
+      setState(() {
+        listCategories.addAll(response);
+      });
+    });
+  }
+```  
+
+
+## Documentación
+
+Este paquete cuenta con los siguientes métodos para consumir
+
+1. Obtener todas las categorías
+```python
+  Future<Either<GenericError, List<String>>> getAllCategories() async {
+    final result = await api_source_use_case.getAllCategories('categories');
+    return result;
+  }
+```
+
+2. Obtener los productos según una categoría
+   
+```python
+  Future<Either<GenericError, List<ProductModel>>> getProductsByCategory(
+      String category) async {
+    final result = await api_source_use_case.getProductsByCategory(category);
+    return result;
+  }
+```
+
+3. Obtener el detalle de un producto
+```python
+  Future<Either<GenericError, ProductModel>> getDetailProduct(
+      String idProduct) async {
+    final result = await api_source_use_case.getDetailProduct(idProduct);
+    return result;
+  }
+```
+
+| Parámetro                             | Tipo            | Descripción                                                                                             |
+| :------------------------------------ | :-------------- | :------------------------------------------------------------------------------------------------------ | 
+| category                              | String          | Corresponde al nombre de la categoría que se va a consultar para el método getProductsByCategory        |       
+| idProduct                             | String          | Corresponde a la variable 'id' del producto del modelo ProductModel para el método  getDetailProduct    |      
+
+
+# Modelo de datos
+
+
+ProductModel
+
+  | Parámetro                            | Tipo            | Descripción                                                                                             |
+  | :------------------------------------| :-------------- | :------------------------------------------------------------------------------------------------------ | 
+  | id                                   | int             | Id de identificación del producto                                                                       |       
+  | title                                | String          | Título del producto                                                                                     | 
+  | price                                | double          | Precio del producto                                                                                     |
+  | description                          | String          | Descripción del producto                                                                                |
+  | category                             | String          | Categoría a la cual corresponde el producto                                                             |
+  | image                                | String          | Url de la imagen correspondiente al producto                                                            |
+  | rating                               | RatingModel     | Modelo de calificación del producto                                                                     |
+
+RatingModel
+
+  | Parámetro                            | Tipo            | Descripción                                                                                             |
+  | :------------------------------------| :-------------- | :------------------------------------------------------------------------------------------------------ | 
+  | ratecount                            | double          | Calificación del producto                                                                               |       
+  | errorMsg                             | int             | Cantidad de calificaciones del producto                                                                 | 
