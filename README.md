@@ -1,7 +1,7 @@
 # Prueba Fase Cuatro
 
 
-Paquete para el consumo de la API FakeStore usando Dart. Se proporcionan los siguientes tres servicios corresponden a obtener todas las categorías, los productos de una categoría y el detalle de un producto.
+Paquete de Flutter que contiene un sistema de diseño basado en Atomic Design para cargar imágenes, textos, lista de strings y lista de productos customizados.
 
 
 ## Tabla de contenido
@@ -18,9 +18,9 @@ Paquete para el consumo de la API FakeStore usando Dart. Se proporcionan los sig
 Añade esto al archivo de tu paquete 'pubspec.yaml':
 
 ```python
-   prueba_fase_tres:
+   prueba_fase_4:
      git:
-       url: https://github.com/AngieHRP/prueba_fase_tres
+       url: https://github.com/AngieHRP/prueba_fase_cuatro
        ref: main
 ```
 
@@ -41,67 +41,15 @@ con Flutter:
 Ahora en tu código Dart, puedes usar:
 
 ```python
-  import 'package:prueba_fase_tres/prueba_fase_tres.dart';
+  import 'package:prueba_fase_4/prueba_fase_4.dart';
 ```
 
 
 ## Uso
-
-
-1. Crear una instancia de la clase PruebaFaseTres
-
-```python
-   final PruebaFaseTres pruebaFaseTres = PruebaFaseTres();  
-```
-2. A continuación se muestra un ejemplo de como acceder a cada una de las APIs de la librería
-
- ```python
-   Future<void> _getAllCategories() async {
-    setState(() {
-      listCategories.clear();
-      listProducts.clear();
-      product = ProductModel.empty();
-    });
-    final response = await pruebaFaseTres.getAllCategories();
-    response.fold((failure) {}, (response) {
-      setState(() {
-        listCategories.addAll(response);
-      });
-    });
-  }
-```  
-
+FALTA
 
 ## Documentación
-
-Este paquete cuenta con los siguientes métodos para consumir
-
-1. Obtener todas las categorías
-```python
-  Future<Either<GenericError, List<String>>> getAllCategories() async {
-    final result = await api_source_use_case.getAllCategories('categories');
-    return result;
-  }
-```
-
-2. Obtener los productos según una categoría
-   
-```python
-  Future<Either<GenericError, List<ProductModel>>> getProductsByCategory(
-      String category) async {
-    final result = await api_source_use_case.getProductsByCategory(category);
-    return result;
-  }
-```
-
-3. Obtener el detalle de un producto
-```python
-  Future<Either<GenericError, ProductModel>> getDetailProduct(
-      String idProduct) async {
-    final result = await api_source_use_case.getDetailProduct(idProduct);
-    return result;
-  }
-```
+FALTA
 
 | Parámetro                             | Tipo            | Descripción                                                                                             |
 | :------------------------------------ | :-------------- | :------------------------------------------------------------------------------------------------------ | 
