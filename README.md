@@ -37,16 +37,15 @@ con Flutter:
    $ flutter packages get
 ```
 
-### 3. Importarlo
+
+## Uso
+
+### 1. Importarlo
 Ahora en tu código Dart, puedes usar:
 
 ```python
   import 'package:prueba_fase_4/prueba_fase_4.dart';
 ```
-
-
-## Uso
-FALTA
 
 ## Documentación
 FALTA
