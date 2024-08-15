@@ -20,7 +20,6 @@ class _TemplateListStringsState extends State<TemplateListStringsPage> {
     return TestFase4BodyApp(
       childHeader: const TestFase4HeaderApp(),
       onBack: true,
-      marginBody: true,
       onBackPressed: () {
         Navigator.of(context).pop();
       },

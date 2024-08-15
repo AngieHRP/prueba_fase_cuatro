@@ -11,14 +11,12 @@ class TestFase4BodyApp extends StatelessWidget {
     required this.childBody,
     this.onBackPressed,
     required this.onBack,
-    required this.marginBody,
   });
 
   final Widget? childHeader;
   final Widget childBody;
   final VoidCallback? onBackPressed;
   final bool onBack;
-  final bool marginBody;
 
   @override
   Widget build(BuildContext context) {

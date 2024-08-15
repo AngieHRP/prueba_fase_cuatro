@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:prueba_fase_4/organisms/item_product.dart';
 import 'package:prueba_fase_4/templates/models/product_model.dart';
 
-class TestFase4IListProduct extends StatelessWidget {
+class TestFase4TemplatesListProduct extends StatelessWidget {
   final List<ProductModel> list;
 
-  const TestFase4IListProduct({
+  const TestFase4TemplatesListProduct({
     super.key,
     required this.list,
   });

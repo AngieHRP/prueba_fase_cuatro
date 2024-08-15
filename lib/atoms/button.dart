@@ -5,16 +5,12 @@ import 'package:prueba_fase_4/tokens/text_styles.dart';
 
 class TestFase4Button extends StatelessWidget {
   final String text;
-  final bool? isDisabled;
   final VoidCallback? onPressed;
-  final double width;
 
   const TestFase4Button({
     super.key,
     required this.text,
-    this.isDisabled = false,
     this.onPressed,
-    this.width = double.infinity,
   });
 
   @override
@@ -28,8 +24,8 @@ class TestFase4Button extends StatelessWidget {
         shadowColor: Colors.transparent,
         elevation: 0.0,
         padding: const EdgeInsets.symmetric(vertical: 0.0),
-        minimumSize: Size(width, 45.0),
-        maximumSize: Size(width, 45.0),
+        minimumSize: const Size(double.infinity, 45.0),
+        maximumSize: const Size(double.infinity, 45.0),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(TestFase4Sizes.sizeImage),
         ),

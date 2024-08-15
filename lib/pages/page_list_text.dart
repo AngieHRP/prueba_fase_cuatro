@@ -19,7 +19,6 @@ class TestFase4PageListText extends StatelessWidget {
       backgroundColor: Colors.white,
       body: TestFase4BodyApp(
         onBack: true,
-        marginBody: true,
         onBackPressed: () {
           Navigator.of(context).pop();
         },

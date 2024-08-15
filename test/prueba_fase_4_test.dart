@@ -1,1 +1,1 @@
-void main() {}
+class PruebaFaseCuatro {}

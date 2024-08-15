@@ -21,7 +21,6 @@ class _AtomsPageState extends State<AtomsPage> {
     return TestFase4BodyApp(
       childHeader: const TestFase4HeaderApp(),
       onBack: true,
-      marginBody: true,
       onBackPressed: () {
         Navigator.of(context).pop();
       },

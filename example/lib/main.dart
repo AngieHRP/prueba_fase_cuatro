@@ -42,7 +42,6 @@ class _PruebaCuatroState extends State<PruebaCuatroPage> {
     return TestFase4BodyApp(
       childHeader: const TestFase4HeaderApp(),
       onBack: false,
-      marginBody: true,
       childBody: SingleChildScrollView(
         child: Column(
           children: [

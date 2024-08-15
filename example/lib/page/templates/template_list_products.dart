@@ -45,7 +45,6 @@ class _TemplateListProductsState extends State<TemplateListProductsPage> {
     return TestFase4BodyApp(
       childHeader: const TestFase4HeaderApp(),
       onBack: true,
-      marginBody: true,
       onBackPressed: () {
         Navigator.of(context).pop();
       },
@@ -65,7 +64,7 @@ class _TemplateListProductsState extends State<TemplateListProductsPage> {
               'Lista de productos',
               style: subTitleStyle,
             ),
-            TestFase4IListProduct(
+            TestFase4TemplatesListProduct(
               list: listProducts,
             ),
           ],

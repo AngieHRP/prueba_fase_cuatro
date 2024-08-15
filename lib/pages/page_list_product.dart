@@ -22,7 +22,6 @@ class TestFase4PageListProducts extends StatelessWidget {
       backgroundColor: Colors.white,
       body: TestFase4BodyApp(
         onBack: true,
-        marginBody: true,
         onBackPressed: () {
           Navigator.of(context).pop();
         },
@@ -37,7 +36,7 @@ class TestFase4PageListProducts extends StatelessWidget {
                 title,
                 style: titleStyle,
               ),
-              TestFase4IListProduct(
+              TestFase4TemplatesListProduct(
                 list: list,
               ),
             ],
