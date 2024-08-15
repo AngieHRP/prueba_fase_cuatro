@@ -3,6 +3,7 @@ import 'package:prueba_fase_4/tokens/colors.dart';
 import 'package:prueba_fase_4/tokens/spacing.dart';
 
 class TestFase4BackgroundItem extends StatelessWidget {
+  /// Widget contenedor del item
   final Widget child;
 
   const TestFase4BackgroundItem({

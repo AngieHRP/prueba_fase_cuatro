@@ -5,6 +5,18 @@ import 'package:prueba_fase_4/tokens/sizes.dart';
 import 'package:prueba_fase_4/tokens/spacing.dart';
 
 class TestFase4BodyApp extends StatelessWidget {
+  /// Widget encabezado de la página
+  final Widget? childHeader;
+
+  /// Widget cuerpo de la página
+  final Widget childBody;
+
+  /// Devolución de llamada para la acción 'atrás' de la página
+  final VoidCallback? onBackPressed;
+
+  /// Si es true activa la función onBackPressed, si es false desaparace el botón para la acción de 'atrás'
+  final bool onBack;
+
   const TestFase4BodyApp({
     super.key,
     this.childHeader,
@@ -12,11 +24,6 @@ class TestFase4BodyApp extends StatelessWidget {
     this.onBackPressed,
     required this.onBack,
   });
-
-  final Widget? childHeader;
-  final Widget childBody;
-  final VoidCallback? onBackPressed;
-  final bool onBack;
 
   @override
   Widget build(BuildContext context) {

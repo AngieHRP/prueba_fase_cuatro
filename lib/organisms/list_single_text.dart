@@ -3,6 +3,7 @@ import 'package:prueba_fase_4/molecules/item_single_text.dart';
 import 'package:prueba_fase_4/tokens/spacing.dart';
 
 class TestFase4ListSingleText extends StatelessWidget {
+  /// Lista de String
   final List<String> list;
 
   const TestFase4ListSingleText({

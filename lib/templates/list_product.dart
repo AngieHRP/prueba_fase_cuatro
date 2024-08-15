@@ -3,6 +3,7 @@ import 'package:prueba_fase_4/organisms/item_product.dart';
 import 'package:prueba_fase_4/templates/models/product_model.dart';
 
 class TestFase4TemplatesListProduct extends StatelessWidget {
+  /// Lista de productos datos por el módelo ProductModel
   final List<ProductModel> list;
 
   const TestFase4TemplatesListProduct({

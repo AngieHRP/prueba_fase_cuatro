@@ -4,7 +4,10 @@ import 'package:prueba_fase_4/tokens/sizes.dart';
 import 'package:prueba_fase_4/tokens/text_styles.dart';
 
 class TestFase4Button extends StatelessWidget {
+  /// Texto del botón
   final String text;
+
+  /// Devolución de llamada para la acción del botón
   final VoidCallback? onPressed;
 
   const TestFase4Button({

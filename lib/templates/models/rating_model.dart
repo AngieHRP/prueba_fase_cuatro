@@ -1,5 +1,8 @@
 class RatingModel {
+  /// Calificación del producto
   double rate;
+
+  /// Cantidad de calificaciones del producto
   int count;
 
   RatingModel({

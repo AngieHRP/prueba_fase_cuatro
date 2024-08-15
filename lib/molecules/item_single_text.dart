@@ -5,6 +5,7 @@ import 'package:prueba_fase_4/tokens/spacing.dart';
 import 'package:prueba_fase_4/tokens/text_styles.dart';
 
 class TestFase4ItemSingleText extends StatelessWidget {
+  /// Texto descriptivo item
   final String title;
 
   const TestFase4ItemSingleText({

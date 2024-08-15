@@ -1,12 +1,25 @@
 import 'package:prueba_fase_4/templates/models/rating_model.dart';
 
 class ProductModel {
+  /// Id de identificación del producto
   int id;
+
+  /// Título del producto
   String title;
+
+  /// Precio del producto
   double price;
+
+  /// Descripción del producto
   String description;
+
+  /// Categoría a la cual corresponde el producto
   String category;
+
+  /// Url de la imagen correspondiente al producto
   String image;
+
+  /// Modelo de calificación del producto
   RatingModel rating;
 
   ProductModel({

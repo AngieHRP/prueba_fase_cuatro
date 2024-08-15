@@ -7,7 +7,10 @@ import 'package:prueba_fase_4/tokens/spacing.dart';
 import 'package:prueba_fase_4/tokens/text_styles.dart';
 
 class TestFase4PageListProducts extends StatelessWidget {
+  /// Lista de productos datos por el módelo ProductModel
   final List<ProductModel> list;
+
+  /// Título de la página
   final String title;
 
   const TestFase4PageListProducts({

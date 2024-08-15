@@ -2,8 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:prueba_fase_4/atoms/asset_images.dart';
 
 class TestFase4NetworkImage extends StatelessWidget {
+  /// Url de la imagen en assets
   final String path;
+
+  /// Ancho de la imagen
   final double width;
+
+  /// Alto de la imagen
   final double height;
 
   const TestFase4NetworkImage({

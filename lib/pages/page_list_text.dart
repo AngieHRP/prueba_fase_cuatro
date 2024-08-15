@@ -4,7 +4,10 @@ import 'package:prueba_fase_4/molecules/header_app.dart';
 import 'package:prueba_fase_4/templates/template_list_text.dart';
 
 class TestFase4PageListText extends StatelessWidget {
+  /// Lista de String
   final List<String> list;
+
+  /// Título de la página
   final String title;
 
   const TestFase4PageListText({
